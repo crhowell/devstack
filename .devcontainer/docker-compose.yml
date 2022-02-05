@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  devtools:
+    container_name: devstack
+    hostname: devstack
+    image: ghcr.io/crhowell/devstack:latest
+    command: "tail -f /dev/null"
+    networks:
+      - devstack_net
+    ports:
+      - "5990:5990"
+    volumes:
+      - "../code:/code"      
+      - "../home/dev:/home/dev"
+    environment:
+      - PGHOST=postgres
+      - PGPASSFILE=/home/db/dev/.pgpass
+  db:
+    container_name: postgres
+    image: postgres
+    ports:
+      - "5432"
+    networks:
+      - devstack_net
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+networks:
+  devstack_net:
+    driver: bridge

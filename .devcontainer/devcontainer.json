@@ -1,0 +1,63 @@
+{
+	// Dev Container Settings
+	"name": "CodePlatoon Devtools",
+	"dockerComposeFile": "docker-compose.yml",
+	"runServices": ["db", "devtools"],
+	"service": "devtools",
+	"workspaceFolder": "/challenges",
+	"shutdownAction": "stopCompose",
+	"settings": {
+		// VSCode presets to be used when VSCode opens the container.
+		"editor.fontSize": 14,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderLineHighlight": "gutter",
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "onFocusChange",
+    "files.eol": "\n",
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Visual Studio Dark",
+		"workbench.startupEditor": "newUntitledFile",
+		"workbench.iconTheme": "vscode-icons",
+		"editor.suggestSelection": "first",
+		// VSCode language specific settings.
+    "[python]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 4,
+			"editor.detectIndentation": false,
+			"editor.rulers": [72, 79]
+		},
+		"terminal.integrated.profiles.linux": {
+			"Bash": {
+				"path": "/bin/bash",
+				"args": ["-l"]
+			}
+		},
+		"python.pythonPath": "/usr/local/bin/python",
+		"python.linting.enabled": true,
+		"python.linting.pep8Enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.formatting.provider": "autopep8",
+		"python.formatting.autopep8Path": "~/.local/bin/autopep8",
+		"python.linting.pylintPath": "~/.local/bin/pylint"
+		// Alternative Linters/Formatters we could use
+		// "python.formatting.blackPath": "~/.local/bin/black",
+		// "python.formatting.yapfPath": "~/.local/bin/yapf",
+		// "python.linting.banditPath": "~/.local/bin/bandit",
+		// "python.linting.flake8Path": "~/.local/bin/flake8"
+	},
+
+	// VSCode Extensions (by ID) to install when VSCode opens container.
+	// NOTE: Only available within the container, installs on initial launch.
+	"extensions": [
+		"ms-python.python",
+		"vscode-icons-team.vscode-icons",
+		"christian-kohler.path-intellisense",
+		"hookyqr.beautify",
+		"coenraads.bracket-pair-colorizer",
+		"hasanali.gitignore-templates",
+		"wholroyd.jinja"
+	]
+}

@@ -5,6 +5,7 @@ services:
     container_name: devstack
     hostname: devstack
     image: ghcr.io/crhowell/devstack:latest
+    command: "tail -f /dev/null"
     networks:
       - devstack_net
     ports:

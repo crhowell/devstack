@@ -29,6 +29,8 @@
 			"editor.detectIndentation": false,
 			"editor.rulers": [72, 79]
 		},
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"terminal.integrated.shellArgs.linux": ["-l"],
 		"terminal.integrated.profiles.linux": {
 			"Bash": {
 				"path": "/bin/bash",

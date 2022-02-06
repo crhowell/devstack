@@ -4,7 +4,7 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"runServices": ["db", "devtools"],
 	"service": "devtools",
-	"workspaceFolder": "/challenges",
+	"workspaceFolder": "/code",
 	"shutdownAction": "stopCompose",
 	"settings": {
 		// VSCode presets to be used when VSCode opens the container.

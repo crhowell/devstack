@@ -33,7 +33,7 @@
 		"terminal.integrated.shellArgs.linux": ["-l"],
 		"terminal.integrated.profiles.linux": {
 			"bash": {
-				"path": "bash",
+				"path": "/bin/bash",
 				"args": ["-l"]
 			}
 		},

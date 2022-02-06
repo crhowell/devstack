@@ -31,8 +31,9 @@
 		},
 		"terminal.integrated.shell.linux": "/bin/bash",
 		"terminal.integrated.shellArgs.linux": ["-l"],
+		"terminal.integrated.defaultProfile.linux": "bash",
 		"terminal.integrated.profiles.linux": {
-			"Bash": {
+			"bash": {
 				"path": "/bin/bash",
 				"args": ["-l"]
 			}

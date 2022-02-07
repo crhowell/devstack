@@ -1,27 +1,26 @@
 {
 	// Dev Container Settings
-	"name": "CodePlatoon Devtools",
+	"name": "Devstack",
 	"dockerComposeFile": "docker-compose.yml",
-	"runServices": ["db", "devtools"],
-	"service": "devtools",
-	"workspaceFolder": "/code",
+	"runServices": ["db", "devstack"],
+	"service": "devstack",
 	"shutdownAction": "stopCompose",
+	"workspaceFolder": "/code",
+
 	"settings": {
 		// VSCode presets to be used when VSCode opens the container.
 		"editor.fontSize": 14,
     "editor.multiCursorModifier": "ctrlCmd",
+		"editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active",
     "editor.renderLineHighlight": "gutter",
+		"editor.suggestSelection": "first",
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "files.autoSave": "onFocusChange",
+		"files.autoSave": "onFocusChange",
     "files.eol": "\n",
-    "window.zoomLevel": 2,
-    "workbench.colorTheme": "Visual Studio Dark",
-		"workbench.startupEditor": "newUntitledFile",
-		"workbench.iconTheme": "vscode-icons",
-		"editor.suggestSelection": "first",
 		// VSCode language specific settings.
     "[python]": {
       "editor.insertSpaces": true,
@@ -29,6 +28,13 @@
 			"editor.detectIndentation": false,
 			"editor.rulers": [72, 79]
 		},
+		"python.pythonPath": "/usr/local/bin/python",
+		"python.linting.enabled": true,
+		"python.linting.pep8Enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.linting.pylintPath": "~/.local/bin/pylint",
+		"python.formatting.provider": "autopep8",
+		"python.formatting.autopep8Path": "~/.local/bin/autopep8",
 		"terminal.integrated.shell.linux": "/bin/bash",
 		"terminal.integrated.shellArgs.linux": ["-l"],
 		"terminal.integrated.profiles.linux": {
@@ -38,13 +44,11 @@
 			}
 		},
 		"terminal.integrated.defaultProfile.linux": "bash",
-		"python.pythonPath": "/usr/local/bin/python",
-		"python.linting.enabled": true,
-		"python.linting.pep8Enabled": true,
-		"python.linting.pylintEnabled": true,
-		"python.formatting.provider": "autopep8",
-		"python.formatting.autopep8Path": "~/.local/bin/autopep8",
-		"python.linting.pylintPath": "~/.local/bin/pylint"
+		
+		"window.zoomLevel": 1,
+    "workbench.colorTheme": "Visual Studio Dark",
+		"workbench.startupEditor": "newUntitledFile",
+		"workbench.iconTheme": "vscode-icons"
 		// Alternative Linters/Formatters we could use
 		// "python.formatting.blackPath": "~/.local/bin/black",
 		// "python.formatting.yapfPath": "~/.local/bin/yapf",
@@ -59,7 +63,6 @@
 		"vscode-icons-team.vscode-icons",
 		"christian-kohler.path-intellisense",
 		"hookyqr.beautify",
-		"coenraads.bracket-pair-colorizer",
 		"hasanali.gitignore-templates",
 		"wholroyd.jinja"
 	]

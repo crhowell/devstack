@@ -15,7 +15,7 @@ services:
       - "../home/dev:/home/dev"
     environment:
       - PGHOST=postgres
-      - PGPASSFILE=/home/dev/.pgpass
+      - PGPASSFILE=/home/db/dev/.pgpass
   db:
     container_name: postgres
     image: postgres

@@ -1,1 +1,3 @@
 This code folder is your working directory you will always be launched into.
+
+You may `git clone` projects/challenges into this folder when the container spins up and loads you into a terminal session. You should be automatically changed into this folder within the container and should be able to navigate into your projects and run code with `node` / `npm` commands or `python`.

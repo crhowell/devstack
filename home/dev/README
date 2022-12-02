@@ -1,3 +1,7 @@
-Prior to Reopening into a container. 
+After you launch the container the first time. 
 
-You can modify your .bash_profile or .bash_aliases which will be loaded when the container spins up. You can also load any .ssh keys here if you want to use GitHub via SSH to clone repos.
+The `code/` and `home/dev` folders in the root of this repo will be volume mounted into the container so we can persist files from your HOST machine into the container. So any changes you make the container can see and run.
+
+`home/dev` folder will act as your whats known as your $HOME directory inside the container. It will contain things like `.bash_aliases` and `.bash_profile` that you may edit. A few alias have already been included to shorten some common commands.
+
+If you would prefer to use SSH Keys with GitHub, you should be able to create and place them into a home/dev/.ssh folder. You will of course have to register your SSH public key (default: `id_rsa.pub`) contents into your GitHub Account settings under SSH Keys section to get that to work.

@@ -2,31 +2,36 @@
 	// Dev Container Settings
 	"name": "Devstack",
 	"dockerComposeFile": "docker-compose.yml",
-	"runServices": ["db", "devstack"],
+	"runServices": [
+		"db",
+		"devstack"
+	],
 	"service": "devstack",
 	"shutdownAction": "stopCompose",
 	"workspaceFolder": "/code",
-
 	"settings": {
 		// VSCode presets to be used when VSCode opens the container.
 		"editor.fontSize": 14,
-    "editor.multiCursorModifier": "ctrlCmd",
+		"editor.multiCursorModifier": "ctrlCmd",
 		"editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs":"active",
-    "editor.renderLineHighlight": "gutter",
+		"editor.guides.bracketPairs": "active",
+		"editor.renderLineHighlight": "gutter",
 		"editor.suggestSelection": "first",
-    "editor.tabSize": 2,
-    "editor.wordWrap": "on",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
+		"editor.tabSize": 2,
+		"editor.wordWrap": "on",
+		"explorer.confirmDelete": false,
+		"explorer.confirmDragAndDrop": false,
 		"files.autoSave": "onFocusChange",
-    "files.eol": "\n",
+		"files.eol": "\n",
 		// VSCode language specific settings.
-    "[python]": {
-      "editor.insertSpaces": true,
-      "editor.tabSize": 4,
+		"[python]": {
+			"editor.insertSpaces": true,
+			"editor.tabSize": 4,
 			"editor.detectIndentation": false,
-			"editor.rulers": [72, 79]
+			"editor.rulers": [
+				72,
+				79
+			]
 		},
 		"python.pythonPath": "/usr/local/bin/python",
 		"python.linting.enabled": true,
@@ -35,18 +40,17 @@
 		"python.linting.pylintPath": "~/.local/bin/pylint",
 		"python.formatting.provider": "autopep8",
 		"python.formatting.autopep8Path": "~/.local/bin/autopep8",
-		"terminal.integrated.shell.linux": "/bin/bash",
-		"terminal.integrated.shellArgs.linux": ["-l"],
 		"terminal.integrated.profiles.linux": {
 			"bash": {
 				"path": "/bin/bash",
-				"args": ["-l"]
+				"args": [
+					"-l"
+				]
 			}
 		},
 		"terminal.integrated.defaultProfile.linux": "bash",
-		
 		"window.zoomLevel": 1,
-    "workbench.colorTheme": "Visual Studio Dark",
+		"workbench.colorTheme": "Visual Studio Dark",
 		"workbench.startupEditor": "newUntitledFile",
 		"workbench.iconTheme": "vscode-icons"
 		// Alternative Linters/Formatters we could use
@@ -55,15 +59,12 @@
 		// "python.linting.banditPath": "~/.local/bin/bandit",
 		// "python.linting.flake8Path": "~/.local/bin/flake8"
 	},
-
 	// VSCode Extensions (by ID) to install when VSCode opens container.
 	// NOTE: Only available within the container, installs on initial launch.
 	"extensions": [
 		"ms-python.python",
 		"vscode-icons-team.vscode-icons",
 		"christian-kohler.path-intellisense",
-		"hookyqr.beautify",
-		"hasanali.gitignore-templates",
-		"wholroyd.jinja"
+		"hookyqr.beautify"
 	]
 }

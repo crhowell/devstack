@@ -2,7 +2,6 @@ version: "3"
 
 services:
   devstack:
-    container_name: devstack
     hostname: devstack
     image: ghcr.io/crhowell/devstack:latest
     command: "tail -f /dev/null"
@@ -17,7 +16,6 @@ services:
       - PGHOST=postgres
       - PGPASSFILE=/home/db/dev/.pgpass
   db:
-    container_name: postgres
     image: postgres
     ports:
       - "5432"
